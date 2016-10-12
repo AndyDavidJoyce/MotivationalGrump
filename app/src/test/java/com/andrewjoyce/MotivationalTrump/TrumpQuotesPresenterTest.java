@@ -47,7 +47,7 @@ public class TrumpQuotesPresenterTest {
         trumpQuotesPresenter.loadTrumpQuotes();
 
         verify(mockTrumpQuotesView).showLoading(true);
-        verify(mockTrumpQuotesView).showLoading(true);
+        verify(mockTrumpQuotesView).showLoading(false);
         verify(mockTrumpQuotesView).showQuotes(trumpQuotes);
     }
 
@@ -57,7 +57,7 @@ public class TrumpQuotesPresenterTest {
         trumpQuotesPresenter.loadTrumpQuotes();
 
         verify(mockTrumpQuotesView, atLeast(1)).showLoading(true);
-        verify(mockTrumpQuotesView, atLeast(1)).showLoading(true);
+        verify(mockTrumpQuotesView, atLeast(1)).showLoading(false);
         verify(mockTrumpQuotesView).showError();
     }
 
